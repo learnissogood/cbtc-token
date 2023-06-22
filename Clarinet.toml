@@ -1,12 +1,24 @@
 [project]
-name = '.'
+name = 'cbtc'
 description = ''
 authors = []
-telemetry = true
-cache_dir = '.\.cache'
-requirements = []
+telemetry = false
+cache_dir = '.cache'
+
+[[project.requirements]]
+contract_id = 'SP3FBR2AGK5H9QBDH3EEN6DF8EK8JY7RX8QJ5SVTE.sip-010-trait-ft-standard'
+[contracts.auto-mint-nft]
+path = 'contracts/auto-mint-nft.clar'
+clarity_version = 2
+epoch = 2.1
+
 [contracts.cbtc-token]
 path = 'contracts/cbtc-token.clar'
+clarity_version = 1
+epoch = 2.05
+
+[contracts.nft-trait]
+path = 'contracts/nft-trait.clar'
 clarity_version = 2
 epoch = 2.1
 [repl.analysis]
@@ -14,6 +26,6 @@ passes = ['check_checker']
 
 [repl.analysis.check_checker]
 strict = false
-trusted_sender = false
+trusted_sender = true
 trusted_caller = false
 callee_filter = false

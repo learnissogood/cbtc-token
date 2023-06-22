@@ -1,5 +1,5 @@
-org: lgalabru
-app: cbtc-bridge
+org: juanchi097
+app: cbdt-token
 service: cbtc-bridge
 frameworkVersion: '3'
 
